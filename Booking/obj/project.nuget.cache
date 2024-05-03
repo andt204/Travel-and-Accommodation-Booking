@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "KyxJpJVmEo2L9a4+w+833zxCCGYvDrAbuuZTaxMnXq92+ZvLNs2WYCHsuEjj6N9Hvj4ZJVPPg0B4YvHrI/muMg==",
+  "success": true,
+  "projectFilePath": "E:\\FPTU\\Sem_6\\TravelAndAccommodationBooking\\Booking\\Booking.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andep\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\andep\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\andep\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\andep\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\andep\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\andep\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
