@@ -2,27 +2,31 @@
 using BookingHotel.Core.IServices;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Models.DTOs;
+using BookingHotel.Core.Utilities;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BookingHotel.Core.Models.DTOs.ServiceResponse;
 
 namespace BookingHotel.Core.Services
 {
     public class AuthService : IAuthService
     {
         private readonly UserManager<User> _userManager;
+        private readonly ISendEmailService _sendEmailService;
         private readonly ITokenRepository _tokenRepository;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public AuthService(UserManager<User> userManager, ITokenRepository tokenRepository, RoleManager<IdentityRole> roleManager)
+        public AuthService(UserManager<User> userManager, ITokenRepository tokenRepository, RoleManager<IdentityRole> roleManager, ISendEmailService sendEmailService)
         {
+            _sendEmailService = sendEmailService;
             _userManager = userManager;
             _tokenRepository = tokenRepository;
             _roleManager = roleManager;
         }
-        public async Task<string> Register(RegisterDTO register)
+        public async Task<GeneralResponse> Register(RegisterDTO register)
         {
             if (register == null)
             {
@@ -37,24 +41,45 @@ namespace BookingHotel.Core.Services
 
             if (identityResult.Succeeded)
             {
+                //generate token for verify email
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(identityUser);
+                //encoder
+                var code = System.Web.HttpUtility.UrlEncode(token);
+                //generate link for verify email
+                var link = $"https://localhost:5001/api/auth/verify-email?email={register.Email}&token={code}";
+                //generate email content
+                var content = $"<a href='{link}'>Click here to verify email</a>";
+                //send email
+                _ = SendEmail(register.Email, "Verify email", content);
                 //add role for user
-                if (register.Roles != null && register.Roles.Any())
+                if (_userManager.Options.SignIn.RequireConfirmedEmail)
                 {
-                    identityResult = await _userManager.AddToRolesAsync(identityUser, register.Roles);
-                    if (identityResult.Succeeded)
+                    if (register.Roles != null && register.Roles.Any())
                     {
-                        return "User created successfully! Pls login";
+                        identityResult = await _userManager.AddToRolesAsync(identityUser, register.Roles);
+                        if (identityResult.Succeeded)
+                        {
+                            return new GeneralResponse(true, "User created success! Please check your email to verify email");
+
+                        }
                     }
                 }
             }
-            return "User created failed!";
+            return new GeneralResponse(false, "User created fail");
         }
 
-        public async Task<string> Signin(LoginDTO loginDTO)
+        //function to send email
+        public async Task<string> SendEmail(string email, string subject, string htmlMessage)
+        {
+            await _sendEmailService.SendEmailAsync(email, subject, htmlMessage);
+            return "Send email success";
+        }
+
+        public async Task<LoginResponse> Signin(LoginDTO loginDTO)
         {
             if (loginDTO == null)
             {
-                return "Invalid login";
+                return new LoginResponse(true, null!, "Login Fail");
             }
 
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
@@ -78,10 +103,10 @@ namespace BookingHotel.Core.Services
                         return new LoginResponse(true, token!, "Login success");
                         //return Object.ReferenceEquals(userToken, null) ? "Login success" : "Login failed";
                     }
-                    return "Login success";
+                    return new LoginResponse(true, null!, "Login Fail");
                 }
             }
-            return "Invalid login";
+            return new LoginResponse(true, null!, "Login Fail");
         }
 
     }

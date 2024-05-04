@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BookingHotel.Core.Models.DTOs.ServiceResponse;
 
 namespace BookingHotel.Core.IServices
 {
     public interface IAuthService
     {
-        Task<string> Signin(LoginDTO loginDTO);
-        Task<string> Register(RegisterDTO register);
+        Task<LoginResponse> Signin(LoginDTO loginDTO);
+        Task<GeneralResponse> Register(RegisterDTO register);
     }
 }
