@@ -5,14 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookingHotel.Core.Repositories
-{
-    public abstract class BaseRepository
-    {
-        protected readonly BookingHotelDbContext _context;
+namespace BookingHotel.Core.Repositories {
+    public abstract class BaseRepository {
+        protected readonly IBookingHotelDbContext _context;
 
-        public BaseRepository(BookingHotelDbContext context)
-        {
+        protected BaseRepository(IBookingHotelDbContext context) {
             _context = context;
         }
     }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookingHotel.Core
-build_property.ProjectDir = D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\
+build_property.ProjectDir = E:\FPTU\Sem_6\New folder (7)\Travel-and-Accommodation-Booking\Booking.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -3,6 +3,7 @@ using BookingHotel.Core.Context;
 using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.IServices;
 using BookingHotel.Core.IUnitOfWorks;
+using BookingHotel.Core.Mapping;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Repositories;
 using BookingHotel.Core.Services;
@@ -25,11 +26,9 @@ namespace BookingHotel {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             //config swagger to show api and token verify 
-            builder.Services.AddSwaggerGen(options =>
-            {
+            builder.Services.AddSwaggerGen(options => {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BookingHotel", Version = "v1" });
-                options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme
-                {
+                options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme {
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
@@ -54,8 +53,7 @@ namespace BookingHotel {
             //config database 
             string connnectionString = builder.Configuration.GetConnectionString("SQLConnection");
 
-            builder.Services.AddDbContext<BookingHotelDbContext>(opts =>
-            {
+            builder.Services.AddDbContext<BookingHotelDbContext>(opts => {
                 // Set up connection string for db context
                 opts.UseSqlServer(connnectionString);
             });
@@ -68,7 +66,12 @@ namespace BookingHotel {
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddScoped<ISendEmailService, SendEmailService>();
+            builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+            builder.Services.AddScoped<IHotelServices, HotelServices>();
+            builder.Services.AddScoped<IBookingHotelDbContext, BookingHotelDbContext>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            builder.Services.AddAutoMapper(typeof(ModelToResourceProfile));
             //config mail setting service
             builder.Services.AddOptions();
             var MailSettings = builder.Configuration.GetSection("MailSettings");

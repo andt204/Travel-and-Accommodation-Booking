@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj": {}
+    "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj": {}
   },
   "projects": {
-    "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj": {
+    "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
+        "projectUniqueName": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
         "projectName": "BookingHotel.Core",
-        "projectPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\obj\\",
+        "projectPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
+        "packagesPath": "C:\\Users\\andep\\.nuget\\packages\\",
+        "outputPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andep\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -89,17 +93,17 @@
         }
       }
     },
-    "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj": {
+    "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
+        "projectUniqueName": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
         "projectName": "Booking",
-        "projectPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\",
+        "projectPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
+        "packagesPath": "C:\\Users\\andep\\.nuget\\packages\\",
+        "outputPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andep\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,8 +117,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj": {
-                "projectPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj"
+              "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj": {
+                "projectPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj"
               }
             }
           }
@@ -129,6 +133,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
