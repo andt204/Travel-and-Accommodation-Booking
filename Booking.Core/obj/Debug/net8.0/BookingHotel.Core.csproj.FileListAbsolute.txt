@@ -13,3 +13,18 @@ E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\refint
 E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.pdb
 E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.genruntimeconfig.cache
 E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\ref\BookingHotel.Core.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.deps.json
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.runtimeconfig.json
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.pdb
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.csproj.AssemblyReference.cache
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.AssemblyInfoInputs.cache
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.AssemblyInfo.cs
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.csproj.CoreCompileInputs.cache
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.sourcelink.json
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\refint\BookingHotel.Core.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.pdb
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.genruntimeconfig.cache
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking.Core\obj\Debug\net8.0\ref\BookingHotel.Core.dll
