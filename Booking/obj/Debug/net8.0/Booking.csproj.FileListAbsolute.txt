@@ -407,3 +407,6 @@ D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-an
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\Microsoft.JSInterop.dll
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\MailKit.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\MimeKit.dll
