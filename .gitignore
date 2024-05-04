@@ -1,1 +1,20 @@
-.vs/TravelAndAccommodationBooking/FileContentIndex/6a91d75f-72c9-4f4c-a966-bdc831b62c4c.vsidx
+# Visual Studio files
+.vs/
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.csproj.user
+
+# Build directories
+*/bin/
+*/obj/
+
+# Other build files
+*.dll
+*.pdb
+
+# NuGet Packages
+*.nuget.props
+*.nuget.targets

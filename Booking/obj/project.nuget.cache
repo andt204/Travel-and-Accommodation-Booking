@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AVUsMT28d9l2HbXLTI0EUq1QRqeBYR1e9GQjdEqcj8kcTlmO52KWTVSaxCEzjhjsMwgX0qzAK3M7j8XBtBOcfQ==",
+  "dgSpecHash": "gHocjKDfuu1xtfRgcwWZ9IHoUMIeqicsyqYDy82BPqAXUBuMpxa3lEf8ZGg21He89ZQiFajyZga6u/DZWl0zbQ==",
   "success": true,
   "projectFilePath": "E:\\FPTU\\Sem_6\\TravelAndAccommodationBooking\\Booking\\Booking.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\andep\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\andep\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\andep\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\andep\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

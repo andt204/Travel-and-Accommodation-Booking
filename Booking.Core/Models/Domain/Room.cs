@@ -1,11 +1,11 @@
-﻿using BookingHotel.Core.Models.Domain;
-
-namespace BookingHotel.Models.Domain {
-    public class Room {
+﻿namespace BookingHotel.Core.Models.Domain
+{
+    public class Room
+    {
         public int Id { get; set; }
         public int RoomNumber { get; set; }
         public bool Status { get; set; }
-        
+
         public int HotelId { get; set; }
         public int RoomClassId { get; set; }
 

@@ -1,7 +1,7 @@
-﻿using BookingHotel.Core.Models.Domain;
-
-namespace BookingHotel.Models.Domain {
-    public class HotelAmentities {
+﻿namespace BookingHotel.Core.Models.Domain
+{
+    public class HotelAmentities
+    {
         public int Id { get; set; }
 
 

@@ -1,5 +1,4 @@
 ﻿using BookingHotel.Core.Models.Domain;
-using BookingHotel.Models.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookingHotel.Core.Context {
+namespace BookingHotel.Core.Context
+{
     public class BookingHotelDbContext : IdentityDbContext<User>, IBookingHotelDbContext {
         public DbSet<Review> Reviews { get  ; set  ; }
         public DbSet<Hotel> Hotels { get  ; set  ; }

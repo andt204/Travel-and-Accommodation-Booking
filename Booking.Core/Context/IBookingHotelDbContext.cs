@@ -1,5 +1,4 @@
 ﻿using BookingHotel.Core.Models.Domain;
-using BookingHotel.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookingHotel.Core.Context {
+namespace BookingHotel.Core.Context
+{
     public interface IBookingHotelDbContext {
         DbSet<Review> Reviews { get; set; }
         DbSet<Hotel> Hotels {  get; set; }
