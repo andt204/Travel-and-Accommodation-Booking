@@ -1,4 +1,5 @@
-﻿using BookingHotel.Core.IServices;
+﻿using BookingHotel.Core.IRepositories;
+using BookingHotel.Core.IServices;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Models.DTOs;
 using Microsoft.AspNetCore.Identity;
@@ -13,12 +14,14 @@ namespace BookingHotel.Core.Services
     public class AuthService : IAuthService
     {
         private readonly UserManager<User> _userManager;
+        private readonly ITokenRepository _tokenRepository;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public AuthService(UserManager<User> userManager)
+        public AuthService(UserManager<User> userManager, ITokenRepository tokenRepository, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
+            _tokenRepository = tokenRepository;
+            _roleManager = roleManager;
         }
-
         public async Task<string> Register(RegisterDTO register)
         {
             if (register == null)
@@ -53,20 +56,33 @@ namespace BookingHotel.Core.Services
             {
                 return "Invalid login";
             }
+
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
             if (user != null)
             {
                 var result = await _userManager.CheckPasswordAsync(user, loginDTO.Password);
                 if (result)
                 {
+                    //get role for this user
+                    var roles = await _userManager.GetRolesAsync(user);
+                    if (roles != null)
+                    {
+                        //generate token
+                        var token = await _tokenRepository.GenerateToken(user, roles.ToList());
+
+                        var userToken = new LoginResponseDTO
+                        {
+                            Token = token
+                        };
+
+                        return new LoginResponse(true, token!, "Login success");
+                        //return Object.ReferenceEquals(userToken, null) ? "Login success" : "Login failed";
+                    }
                     return "Login success";
-                }
-                else
-                {
-                    return "Invalid login";
                 }
             }
             return "Invalid login";
         }
+
     }
 }

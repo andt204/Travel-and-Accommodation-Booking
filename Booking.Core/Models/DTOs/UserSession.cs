@@ -11,6 +11,6 @@ namespace BookingHotel.Core.Models.DTOs
             string? Id,
             string? Email,
             string? Name,
-            string[]? Role
+            string? Role
         );
 }

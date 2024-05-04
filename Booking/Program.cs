@@ -39,6 +39,7 @@ namespace BookingHotel {
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IBookingService, BookingService>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
 
             //config for identity
