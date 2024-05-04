@@ -1,0 +1,15 @@
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.deps.json
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.runtimeconfig.json
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.dll
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\bin\Debug\net8.0\BookingHotel.Core.pdb
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.csproj.AssemblyReference.cache
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.AssemblyInfoInputs.cache
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.AssemblyInfo.cs
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.csproj.CoreCompileInputs.cache
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.sourcelink.json
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.dll
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\refint\BookingHotel.Core.dll
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.pdb
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\BookingHotel.Core.genruntimeconfig.cache
+E:\FPTU\Sem_6\TravelAndAccommodationBooking\Booking.Core\obj\Debug\net8.0\ref\BookingHotel.Core.dll

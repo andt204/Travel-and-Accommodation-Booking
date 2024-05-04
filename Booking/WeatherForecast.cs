@@ -1,4 +1,4 @@
-namespace Booking {
+namespace BookingHotel {
     public class WeatherForecast {
         public DateOnly Date { get; set; }
 

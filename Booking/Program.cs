@@ -1,5 +1,8 @@
 
-namespace Booking {
+using BookingHotel.Core.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace BookingHotel {
     public class Program {
         public static void Main(string[] args) {
             var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +14,16 @@ namespace Booking {
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //config database 
+            string connnectionString = builder.Configuration.GetConnectionString("SQLConnection");
+
+            builder.Services.AddDbContext<BookingHotelDbContext>(opts =>
+            {
+                // Set up connection string for db context
+                opts.UseSqlServer(connnectionString);
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -18,6 +31,8 @@ namespace Booking {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
 
