@@ -1,4 +1,5 @@
-﻿using BookingHotel.Models.Domain;
+﻿using BookingHotel.Core.Models.DTOs;
+using BookingHotel.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace BookingHotel.Core.IRepositories
     {
         Task<IEnumerable<Booking>> GetAllAsync();
         Task<Booking> GetByIdAsync(int id);
-        Task CreateBooking(Booking booking);
+        Task CreateBooking(BookingDTO booking);
         Task UpdateAsync(Booking booking);
         Task RemoveAsync(int Id);
         Task<Invoice> GetInvoiceByBookingId(int bookingId); 

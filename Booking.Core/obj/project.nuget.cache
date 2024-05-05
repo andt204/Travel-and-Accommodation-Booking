@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0gKuX7S+MJlD/8Q9lypvfMpgMJzCGyHut6RF87CTJoEMdXzOLsCzImQpXf9vg6qC0Z3wnE9gLfwBX550AWU1UQ==",
+  "dgSpecHash": "xVStcZ7CCmAmlkx2cpURb8TJsLmEL3c2IzkIKrJT1jENUJHxEB0VOBEhW6Tb1wFBjIW8j9v/yG42iKiLLUpZPw==",
   "success": true,
   "projectFilePath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ACER\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",

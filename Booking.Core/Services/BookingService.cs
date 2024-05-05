@@ -1,6 +1,7 @@
 ﻿using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.IServices;
 using BookingHotel.Core.IUnitOfWorks;
+using BookingHotel.Core.Models.DTOs;
 using BookingHotel.Core.Services.Communication;
 using BookingHotel.Models.Domain;
 using System;
@@ -21,7 +22,7 @@ namespace BookingHotel.Core.Services
             _bookingRepository = bookingRepository;
         }
 
-        public async Task CreateBooking(Booking booking)
+        public async Task CreateBooking(BookingDTO booking)
         {
             if(booking == null)
             {

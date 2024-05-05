@@ -1,5 +1,6 @@
 ﻿using BookingHotel.Core.Context;
 using BookingHotel.Core.IRepositories;
+using BookingHotel.Core.Models.DTOs;
 using BookingHotel.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,9 +17,17 @@ namespace BookingHotel.Core.Repositories
         {
         }
 
-        public async Task CreateBooking(Booking booking)
+        public async Task CreateBooking(BookingDTO booking)
         {
-            await _context.Bookings.AddAsync(booking);
+            var bookingEntity = new Booking
+            {
+                StartDate = booking.StartDate,
+                EndDate = booking.EndDate,
+                status = booking.status,
+                RoomId = booking.RoomId,
+                UserId = booking.UserId
+            };
+            await _context.Bookings.AddAsync(bookingEntity);
         }
 
         public async Task<IEnumerable<Booking>> GetAllAsync()
