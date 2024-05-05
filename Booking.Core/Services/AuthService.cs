@@ -80,7 +80,7 @@ namespace BookingHotel.Core.Services
         {
             if (loginDTO == null)
             {
-                return new LoginResponse(true, null!, "Login Fail");
+                return new LoginResponse(true, null!, "Login Fail", null);
             }
 
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
@@ -101,13 +101,13 @@ namespace BookingHotel.Core.Services
                             Token = token
                         };
 
-                        return new LoginResponse(true, token!, "Login success");
+                        return new LoginResponse(true, token!, "Login success", roles.ToArray());
                         //return Object.ReferenceEquals(userToken, null) ? "Login success" : "Login failed";
                     }
-                    return new LoginResponse(true, null!, "Login Fail");
+                    return new LoginResponse(true, null!, "Login Fail", null);
                 }
             }
-            return new LoginResponse(true, null!, "Login Fail");
+            return new LoginResponse(true, null!, "Login Fail", null);
         }
 
         public Task<GeneralResponse> ConfirmVerifyEmail(string email, string token)

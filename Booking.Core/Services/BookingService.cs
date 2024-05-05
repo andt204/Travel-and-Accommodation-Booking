@@ -1,6 +1,7 @@
 ﻿using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.IServices;
 using BookingHotel.Core.IUnitOfWorks;
+using BookingHotel.Core.Services.Communication;
 using BookingHotel.Models.Domain;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,15 @@ namespace BookingHotel.Core.Services
             _unitOfWorks = unitOfWork;
             _bookingRepository = bookingRepository;
         }
-        public async Task AddAsync(Booking booking)
+
+        public async Task CreateBooking(Booking booking)
         {
-            await _bookingRepository.AddAsync(booking);
-            _ = _unitOfWorks.CompleteAsync();
+            if(booking == null)
+            {
+                throw new ArgumentNullException(nameof(booking));
+            }
+            _ = _bookingRepository.CreateBooking(booking);
+            await _unitOfWorks.CompleteAsync();
         }
 
         public async Task<IEnumerable<Booking>> GetAllAsync()
@@ -30,24 +36,29 @@ namespace BookingHotel.Core.Services
             return await _bookingRepository.GetAllAsync();
         }
 
-        public async Task<Booking?> GetByIdAsync(int id)
+        public async Task<Booking> GetByIdAsync(int id)
         {
             if (id == null)
             {
-                throw new ArgumentNullException(nameof(id));
+                 throw new Exception("Id is null");
             }
-            var booking = await _bookingRepository.GetByIdAsync(id);
-            return booking;
+            return await _bookingRepository.GetByIdAsync(id);
         }
 
-        public async Task RemoveAsync(Booking booking)
+        public async Task<Invoice> GetInvoiceByBookingId(int bookingId)
         {
-            if (booking == null)
+            return await _bookingRepository.GetInvoiceByBookingId(bookingId);
+        }
+
+        public async Task RemoveAsync(int Id)
+        {
+            if(Id == null)
             {
-                throw new ArgumentNullException(nameof(booking));
+                throw new Exception("Id is null");
             }
-            await _bookingRepository.RemoveAsync(booking);
-            _ = _unitOfWorks.CompleteAsync();
+            _ = _bookingRepository.RemoveAsync(Id);
+            await _unitOfWorks.CompleteAsync();
+
         }
 
         public async Task UpdateAsync(Booking booking)

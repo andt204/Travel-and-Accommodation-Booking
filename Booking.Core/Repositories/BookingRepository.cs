@@ -16,7 +16,7 @@ namespace BookingHotel.Core.Repositories
         {
         }
 
-        public async Task AddAsync(Booking booking)
+        public async Task CreateBooking(Booking booking)
         {
             await _context.Bookings.AddAsync(booking);
         }
@@ -31,14 +31,27 @@ namespace BookingHotel.Core.Repositories
             return await _context.Bookings.FindAsync(id);
         }
 
-        public async Task RemoveAsync(Booking booking)
+        public async Task<Invoice> GetInvoiceByBookingId(int bookingId)
         {
-            _context.Bookings.Remove(booking);
+            return await _context.Invoices.FirstOrDefaultAsync(x => x.BookingId == bookingId);
+        }
+
+        public async Task RemoveAsync(int Id)
+        {
+            var bookingFind = await _context.Bookings.FindAsync(Id);
+            if (bookingFind == null)
+            {
+                throw new Exception("Booking not found");
+            }
+            _context.Bookings.Remove(bookingFind);
         }
 
         public async Task UpdateAsync(Booking booking)
         {
-            _context.Bookings.Update(booking);
+            await Task.Run(() =>
+            {
+                _context.Bookings.Update(booking);
+            });
         }
     }
 }
