@@ -3,6 +3,7 @@ using BookingHotel.Core.Context;
 using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.IServices;
 using BookingHotel.Core.IUnitOfWorks;
+using BookingHotel.Core.Mapping;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Repositories;
 using BookingHotel.Core.Services;
@@ -70,6 +71,9 @@ namespace BookingHotel
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddTransient<ISendEmailService, SendEmailService>();
+
+            //config mapping
+            builder.Services.AddAutoMapper(typeof(ModelToResourceProfile));
 
             //config mail setting service
             builder.Services.AddOptions();

@@ -1,5 +1,7 @@
-﻿using BookingHotel.Core.IServices;
+﻿using AutoMapper;
+using BookingHotel.Core.IServices;
 using BookingHotel.Core.Models.Domain;
+using BookingHotel.Core.Models.DTOs;
 using BookingHotel.Core.Services.Communication;
 using BookingHotel.Models.Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -13,8 +15,10 @@ namespace BookingHotel.Controllers
     public class UserBookingController : ControllerBase
     {
         private readonly IBookingService _bookingService;
-        public UserBookingController(IBookingService bookingService)
+        private readonly IMapper  _mapper;
+        public UserBookingController(IBookingService bookingService, IMapper mapper)
         {
+            _mapper = mapper;
             _bookingService = bookingService;
         }
 
@@ -32,10 +36,18 @@ namespace BookingHotel.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateBooking([FromBody] Booking booking)
+        public async Task<IActionResult> CreateBooking([FromBody] BookingDTO booking)
         {
             // Xử lý yêu cầu tạo mới đặt vé của người dùng
-            return Ok();
+            var result = _bookingService.CreateBooking(booking);
+            //mapping
+            var bookingModel = _mapper.Map<Booking>(booking);
+            if(result == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(bookingModel);
         }
 
         [HttpDelete]

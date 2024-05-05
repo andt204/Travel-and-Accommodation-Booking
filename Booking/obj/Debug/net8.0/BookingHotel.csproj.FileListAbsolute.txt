@@ -270,3 +270,4 @@ D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-an
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\obj\Debug\net8.0\BookingHotel.pdb
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\obj\Debug\net8.0\BookingHotel.genruntimeconfig.cache
 D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\obj\Debug\net8.0\ref\BookingHotel.dll
+D:\Semester-OJT-Training\Travel and Accommodation Booking Platform API\Travel-and-Accommodation-Booking\Booking\bin\Debug\net8.0\AutoMapper.dll
