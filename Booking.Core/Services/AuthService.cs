@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static BookingHotel.Core.Models.DTOs.ServiceResponse;
+using static BookingHotel.Core.Services.Communication.ServiceResponse;
 
 namespace BookingHotel.Core.Services
 {
@@ -26,7 +26,8 @@ namespace BookingHotel.Core.Services
             _tokenRepository = tokenRepository;
             _roleManager = roleManager;
         }
-        public async Task<GeneralResponse> Register(RegisterDTO register)
+
+        public async Task<RegisterResponse> Register(RegisterDTO register)
         {
             if (register == null)
             {
@@ -59,13 +60,13 @@ namespace BookingHotel.Core.Services
                         identityResult = await _userManager.AddToRolesAsync(identityUser, register.Roles);
                         if (identityResult.Succeeded)
                         {
-                            return new GeneralResponse(true, "User created success! Please check your email to verify email");
+                            return new RegisterResponse(true, register.Email, code, "User created success");
 
                         }
                     }
                 }
             }
-            return new GeneralResponse(false, "User created fail");
+            return new RegisterResponse (false, register.Email, null!, "User created fail");
         }
 
         //function to send email
@@ -109,5 +110,28 @@ namespace BookingHotel.Core.Services
             return new LoginResponse(true, null!, "Login Fail");
         }
 
+        public Task<GeneralResponse> ConfirmVerifyEmail(string email, string token)
+        {
+            if(email == null || token == null)
+            {
+                return Task.FromResult(new GeneralResponse(false, "Email or token is null"));
+            }
+            var user = _userManager.FindByEmailAsync(email).Result;
+            if(user == null)
+            {
+                return Task.FromResult(new GeneralResponse(false, "User not found"));
+            }
+
+            //decode token
+            token = System.Web.HttpUtility.UrlDecode(token);
+            //confirm verify email
+            var result = _userManager.ConfirmEmailAsync(user, token).Result;
+            //if success
+            if(result.Succeeded)
+            {
+                return Task.FromResult(new GeneralResponse(true, "Verify email success"));
+            }
+            return Task.FromResult(new GeneralResponse(false, "Verify email fail"));
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace BookingHotel.Core.Utilities
         public int Port { get; set; }
     }
     public interface ISendEmailService
-    {
+    {   
         Task SendEmailAsync(string email, string subject, string htmlMessage);
     }
     public class SendEmailService : ISendEmailService
@@ -33,10 +33,16 @@ namespace BookingHotel.Core.Utilities
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             var message = new MimeMessage();
-            message.Sender = new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail);
-            message.From.Add(new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail));
-            message.To.Add(MailboxAddress.Parse(email));
-            message.Subject = subject;
+            try
+            {
+                message.Sender = new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail);
+                message.From.Add(new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail));
+                message.To.Add(MailboxAddress.Parse(email));
+                message.Subject = subject;
+            } catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
 
             var builder = new BodyBuilder();
             builder.HtmlBody = htmlMessage;
