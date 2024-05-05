@@ -67,20 +67,22 @@ namespace BookingHotel {
             builder.Services.AddScoped<IBookingService, BookingService>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
-            builder.Services.AddScoped<ISendEmailService, SendEmailService>();
+            builder.Services.AddTransient<ISendEmailService, SendEmailService>();
 
             //config mail setting service
             builder.Services.AddOptions();
             var MailSettings = builder.Configuration.GetSection("MailSettings");
+            builder.Services.Configure<MailSettings>(MailSettings);
+
             //config for identity
-            /*builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.Authority = "https://localhost:5001";
-                    options.Audience = "bookinghotel";
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.);
-                });
-*/
+            /* builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                 .AddJwtBearer(options =>
+                 {
+                     options.Authority = "https://localhost:5001";
+                     options.Audience = "bookinghotel";
+                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.);
+                 });*/
+
             builder.Services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<BookingHotelDbContext>()
                 .AddDefaultTokenProviders();

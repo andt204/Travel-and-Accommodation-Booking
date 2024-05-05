@@ -26,5 +26,11 @@ namespace Booking.Controllers
             var result = await _authService.Signin(loginDTO);
             return Ok(result);
         }
+        [HttpPost]
+        public async Task<IActionResult> VerifyEmail([FromQuery] string email, [FromQuery] string token)
+        {
+            var result = await _authService.ConfirmVerifyEmail(email, token);
+            return Ok(result);
+        }
     }
 }
