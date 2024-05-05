@@ -14,9 +14,12 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
-namespace BookingHotel {
-    public class Program {
-        public static void Main(string[] args) {
+namespace BookingHotel
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -27,29 +30,29 @@ namespace BookingHotel {
             //config swagger to show api and token verify 
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BookingHotel", Version = "v1" });
-                options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                var securityScheme = new OpenApiSecurityScheme
                 {
-                    Name = "Authorization",
+                    Name = "JWT Authentication",
+                    Description = "Enter a valid JWT bearer token",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = JwtBearerDefaults.AuthenticationScheme
-                });
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    Reference = new OpenApiReference
+                    {
+                        Id = JwtBearerDefaults.AuthenticationScheme,
+                        Type = ReferenceType.SecurityScheme
+                    }
+                };
+
+                options.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = JwtBearerDefaults.AuthenticationScheme
-                            }
-                        },
-                        new List<string>()
-                    }
+                    {securityScheme, new string[] {} }
                 });
             });
+
+
 
             //config database 
             string connnectionString = builder.Configuration.GetConnectionString("SQLConnection");
@@ -64,7 +67,6 @@ namespace BookingHotel {
             builder.Services.AddScoped<IBookingRepository, BookingRepository>();
             builder.Services.AddScoped<IBookingService, BookingService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
-            builder.Services.AddScoped<IBookingService, BookingService>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddTransient<ISendEmailService, SendEmailService>();
@@ -75,20 +77,43 @@ namespace BookingHotel {
             builder.Services.Configure<MailSettings>(MailSettings);
 
             //config for identity
-            /* builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                 .AddJwtBearer(options =>
-                 {
-                     options.Authority = "https://localhost:5001";
-                     options.Audience = "bookinghotel";
-                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.);
-                 });*/
+
+            var validIssuer = builder.Configuration.GetValue<string>("JWT:ValidIssuer");
+            var validAudience = builder.Configuration.GetValue<string>("JWT:ValidAudience");
+            var symmetricSecurityKey = builder.Configuration.GetValue<string>("JWT:Secret");
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.IncludeErrorDetails = true;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ClockSkew = TimeSpan.FromMinutes(5), // Adjust as needed
+                    ValidateIssuer = true,  
+                    ValidateAudience = true,
+                    ValidateLifetime = true,    
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = validIssuer,
+                    ValidAudience = validAudience,
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(symmetricSecurityKey)
+                    ),
+                };
+            });
+
 
             builder.Services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<BookingHotelDbContext>()
                 .AddDefaultTokenProviders();
             builder.Services.AddRazorPages();
 
-            builder.Services.Configure<IdentityOptions>(options => {
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = true;
@@ -112,18 +137,20 @@ namespace BookingHotel {
                 options.SignIn.RequireConfirmedAccount = true;
             });
 
-            /*builder.Services.ConfigureApplicationCookie(options => {
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
                 // Cookie settings
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
-                options.LoginPath = "/Auth/Login";
+                options.LoginPath = "/api/Auth/Login";
 
-                options.LogoutPath = "/Account/Logout";
+                options.LogoutPath = "/api/Auth/Register";
                 options.SlidingExpiration = true;
-            });*/
+            });
 
-            builder.Services.AddSession(options => {
+            builder.Services.AddSession(options =>
+            {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
             });
@@ -131,7 +158,8 @@ namespace BookingHotel {
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment()) {
+            if (app.Environment.IsDevelopment())
+            {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
@@ -152,6 +180,8 @@ namespace BookingHotel {
 
 
             app.MapControllers();
+
+            app.MapRazorPages();
 
             app.Run();
         }

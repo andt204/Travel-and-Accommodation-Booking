@@ -8448,9 +8448,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
-      "projectName": "Booking",
-      "projectPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\Booking.csproj",
+      "projectUniqueName": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\BookingHotel.csproj",
+      "projectName": "BookingHotel",
+      "projectPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\BookingHotel.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
       "outputPath": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\",
       "projectStyle": "PackageReference",

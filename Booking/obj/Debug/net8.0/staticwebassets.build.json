@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "J19Jb85/HLml4Unmu1gEAE9J24wARCwmsGE4dJ/p7UY=",
-  "Source": "Booking",
-  "BasePath": "_content/Booking",
+  "Hash": "P3d7GjgpvFblCUGA8jEnpWRJY+bzzi7xH+r4uFRHaf8=",
+  "Source": "BookingHotel",
+  "BasePath": "_content/BookingHotel",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
@@ -47,12 +47,12 @@
       "OriginalItemSpec": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.styles.css",
-      "SourceId": "Booking",
+      "Identity": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css",
+      "SourceId": "BookingHotel",
       "SourceType": "Computed",
       "ContentRoot": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Booking",
-      "RelativePath": "Booking.styles.css",
+      "BasePath": "_content/BookingHotel",
+      "RelativePath": "BookingHotel.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.styles.css"
+      "OriginalItemSpec": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css"
     }
   ]
 }
