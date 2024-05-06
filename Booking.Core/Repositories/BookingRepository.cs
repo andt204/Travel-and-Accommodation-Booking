@@ -1,7 +1,7 @@
 ﻿using BookingHotel.Core.Context;
 using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.Models.DTOs;
-using BookingHotel.Models.Domain;
+using BookingHotel.Core.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

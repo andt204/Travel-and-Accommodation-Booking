@@ -3,7 +3,7 @@ using BookingHotel.Core.IServices;
 using BookingHotel.Core.IUnitOfWorks;
 using BookingHotel.Core.Models.DTOs;
 using BookingHotel.Core.Services.Communication;
-using BookingHotel.Models.Domain;
+using BookingHotel.Core.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

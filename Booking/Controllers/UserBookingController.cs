@@ -3,7 +3,6 @@ using BookingHotel.Core.IServices;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Models.DTOs;
 using BookingHotel.Core.Services.Communication;
-using BookingHotel.Models.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +40,7 @@ namespace BookingHotel.Controllers
             // Xử lý yêu cầu tạo mới đặt vé của người dùng
             var result = _bookingService.CreateBooking(booking);
             //mapping
-            var bookingModel = _mapper.Map<Booking>(booking);
+            var bookingModel = _mapper.Map<BookingDTO>(booking);
             if(result == null)
             {
                 return BadRequest();

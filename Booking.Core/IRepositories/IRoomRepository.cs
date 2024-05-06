@@ -1,4 +1,4 @@
-﻿using BookingHotel.Models.Domain;
+﻿using BookingHotel.Core.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

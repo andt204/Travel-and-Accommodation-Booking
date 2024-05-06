@@ -9,10 +9,7 @@
       "BookingHotel.Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-<<<<<<< HEAD
           "MailKit": "4.5.0",
-=======
->>>>>>> andt
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace BookingHotel.Core.Repositories
 {
     public class HotelRepository : BaseRepository, IHotelRepository {
-        public HotelRepository(IBookingHotelDbContext context) : base(context) {
+        public HotelRepository(BookingHotelDbContext context) : base(context) {
         }
 
         public Task AddAsync(Hotel hotel) {

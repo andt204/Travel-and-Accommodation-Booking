@@ -44,13 +44,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
-<<<<<<< HEAD
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
             },
-=======
->>>>>>> andt
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
