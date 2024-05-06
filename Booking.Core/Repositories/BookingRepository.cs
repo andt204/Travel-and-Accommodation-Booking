@@ -13,7 +13,7 @@ namespace BookingHotel.Core.Repositories
 {
     public class BookingRepository : BaseRepository, IBookingRepository
     {
-        public BookingRepository(BookingHotelDbContext context) : base(context)
+        public BookingRepository(IBookingHotelDbContext context) : base(context)
         {
         }
 

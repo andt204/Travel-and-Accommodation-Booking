@@ -1,8 +1,14 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "0S+B37fdwqQk8fGiN2DiiiiDLVLsLOR3T7lSBY7MSBY=",
   "Source": "BookingHotel",
   "BasePath": "_content/BookingHotel",
+=======
+  "Hash": "EbsA/QXjUbFDSRfTT393YHLCDHKNb9unKFnuB8DWjes=",
+  "Source": "Booking",
+  "BasePath": "_content/Booking",
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
@@ -47,12 +53,21 @@
       "OriginalItemSpec": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css",
       "SourceId": "BookingHotel",
       "SourceType": "Computed",
       "ContentRoot": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookingHotel",
       "RelativePath": "BookingHotel.styles.css",
+=======
+      "Identity": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.styles.css",
+      "SourceId": "Booking",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Booking",
+      "RelativePath": "Booking.styles.css",
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -63,7 +78,11 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css"
+=======
+      "OriginalItemSpec": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.styles.css"
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
     }
   ]
 }

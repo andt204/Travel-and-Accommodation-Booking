@@ -24,7 +24,11 @@
       },
       "AutoMapper/13.0.1": {
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.Extensions.Options": "8.0.0"
+=======
+          "Microsoft.Extensions.Options": "8.0.2"
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
         },
         "runtime": {
           "lib/net6.0/AutoMapper.dll": {
@@ -2079,6 +2083,10 @@
       "BookingHotel.Core/1.0.0": {
         "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          "AutoMapper": "13.0.1",
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
           "MailKit": "4.5.0",
 =======
           "AutoMapper": "13.0.1",

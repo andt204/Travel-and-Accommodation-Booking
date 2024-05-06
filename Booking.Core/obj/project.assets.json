@@ -5111,11 +5111,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
       "projectName": "BookingHotel.Core",
       "projectPath": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
       "packagesPath": "C:\\Users\\andep\\.nuget\\packages\\",
       "outputPath": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking.Core\\obj\\",
+=======
+      "projectUniqueName": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
+      "projectName": "BookingHotel.Core",
+      "projectPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\BookingHotel.Core.csproj",
+      "packagesPath": "C:\\Users\\andep\\.nuget\\packages\\",
+      "outputPath": "E:\\FPTU\\Sem_6\\New folder (7)\\Travel-and-Accommodation-Booking\\Booking.Core\\obj\\",
+>>>>>>> 6cb157cd79999788544262ffc975feba6cfdfae5
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andep\\AppData\\Roaming\\NuGet\\NuGet.Config",
