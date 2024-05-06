@@ -72,6 +72,9 @@ namespace BookingHotel
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<ITokenRepository, TokenRepository>();
             builder.Services.AddTransient<ISendEmailService, SendEmailService>();
+            builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+            builder.Services.AddScoped<IHotelServices, HotelServices>();
+
 
             //config mapping
             builder.Services.AddAutoMapper(typeof(ModelToResourceProfile));

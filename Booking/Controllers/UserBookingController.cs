@@ -28,10 +28,10 @@ namespace BookingHotel.Controllers
 
             if(result == null)
             {
-                return null;
+                return NotFound();
             }
-
-            return Ok(result);
+            var resouces = _mapper.Map<IEnumerable<BookingHotel.Core.Models.Domain.Booking>, IEnumerable<BookingDTO>>(result);
+            return Ok(resouces);
         }
 
         [HttpPost]
