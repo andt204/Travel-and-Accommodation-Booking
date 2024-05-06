@@ -4,14 +4,12 @@ using BookingHotel.Core.Models.Domain;
 using System;
 
 
-namespace BookingHotel.Core.Mapping
-{
-    public class ModelToResourceProfile : AutoMapper.Profile
-    {
-        public ModelToResourceProfile()
-        {
+namespace BookingHotel.Core.Mapping {
+    public class ModelToResourceProfile : AutoMapper.Profile {
+        public ModelToResourceProfile() {
             CreateMap<Booking, BookingDTO>().ReverseMap();
-            CreateMap<Hotel, HotelDto>();
+            CreateMap<Hotel, HotelDto>().ReverseMap();
+            CreateMap<Hotel, SaveHotelDto>().ReverseMap();
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using BookingHotel.Core.Models.Domain;
+using BookingHotel.Core.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookingHotel.Core.Services.Communication
-{
+namespace BookingHotel.Core.Services.Communication {
     public class HotelResponse : BaseResponse {
         public Hotel Hotel { get; private set; }
 
@@ -19,7 +19,7 @@ namespace BookingHotel.Core.Services.Communication
         /// </summary>
         /// <param name="category">Saved category.</param>
         /// <returns>Response.</returns>
-        public HotelResponse(Hotel hotel) : this(true, string.Empty, hotel) { }
+        public HotelResponse(Hotel hotel) : this(true, "Item added successfully!", hotel) { }
 
         /// <summary>
         /// Creates am error response.

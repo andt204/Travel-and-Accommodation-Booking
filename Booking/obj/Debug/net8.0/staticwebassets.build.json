@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P3d7GjgpvFblCUGA8jEnpWRJY+bzzi7xH+r4uFRHaf8=",
+  "Hash": "0S+B37fdwqQk8fGiN2DiiiiDLVLsLOR3T7lSBY7MSBY=",
   "Source": "BookingHotel",
   "BasePath": "_content/BookingHotel",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -25,13 +25,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -44,13 +44,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\andep\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css",
+      "Identity": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css",
       "SourceId": "BookingHotel",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookingHotel",
       "RelativePath": "BookingHotel.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Semester-OJT-Training\\Travel and Accommodation Booking Platform API\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css"
+      "OriginalItemSpec": "E:\\FPTU\\Sem_6\\New folder (10)\\Travel-and-Accommodation-Booking\\Booking\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookingHotel.styles.css"
     }
   ]
 }
