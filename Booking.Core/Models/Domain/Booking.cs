@@ -1,5 +1,7 @@
-﻿namespace BookingHotel.Models.Domain {
-    public class Booking {
+﻿namespace BookingHotel.Core.Models.Domain
+{
+    public class Booking
+    {
         public int Id { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

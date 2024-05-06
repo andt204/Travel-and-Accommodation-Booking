@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
 namespace BookingHotel.Core.IUnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
@@ -28,3 +29,18 @@ namespace BookingHotel.Core.IUnitOfWorks
         }
     }
 }
+=======
+namespace BookingHotel.Core.IUnitOfWorks {
+    public class UnitOfWork : IUnitOfWork {
+        private readonly BookingHotelDbContext _context;
+
+        public UnitOfWork(BookingHotelDbContext context) {
+            _context = context;
+        }
+
+        public async Task CompleteAsync() {
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+>>>>>>> andt

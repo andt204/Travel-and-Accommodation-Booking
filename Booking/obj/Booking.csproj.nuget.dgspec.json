@@ -40,9 +40,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
+=======
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+>>>>>>> andt
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -129,6 +135,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
@@ -144,6 +151,11 @@
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.4, )"
+=======
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+>>>>>>> andt
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

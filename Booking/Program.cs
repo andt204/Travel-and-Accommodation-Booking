@@ -1,4 +1,4 @@
-﻿
+
 using BookingHotel.Core.Context;
 using BookingHotel.Core.IRepositories;
 using BookingHotel.Core.IServices;
@@ -7,9 +7,7 @@ using BookingHotel.Core.Mapping;
 using BookingHotel.Core.Models.Domain;
 using BookingHotel.Core.Repositories;
 using BookingHotel.Core.Services;
-using BookingHotel.Core.Utilities;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
