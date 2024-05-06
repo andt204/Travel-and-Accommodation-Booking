@@ -13,6 +13,8 @@ namespace BookingHotel.Core.Repositories
         protected readonly BookingHotelDbContext _context;
 
         public BaseRepository(BookingHotelDbContext context)
-        { }
+        {
+            _context = context;
+        }
     }
 }
